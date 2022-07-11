@@ -1,5 +1,7 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 var __webpack_exports__ = {};
+
 /*
  
     _______      ,-----.    .-------.    ,---.   .--..-./`)  ________    ____     __  
@@ -14,6 +16,7 @@ var __webpack_exports__ = {};
                                                                                       
 
 */
+
 var cornify_count = 0;
 
 var cornify_add = function cornify_add(options) {
@@ -318,9 +321,11 @@ var cornify_add_cupcake_button = function cornify_add_cupcake_button() {
 
 
 window.addEventListener('DOMContentLoaded', function () {
-  var words = ['Selah'];
+  var words = ['Selah', 'Mommy', 'Clancy', 'Daddy'];
+  var word;
   var removeBtn = document.getElementById('remove-unicorns-btn');
-  var addBtn = document.getElementById('add-unicorns-btn');
+  var inputEl = document.getElementById('text-area');
+  var displayTarget = document.getElementById('display-word');
 
   var removeUnicorns = function removeUnicorns() {
     for (var i = 0; i < cornify_count; i++) {
@@ -329,7 +334,25 @@ window.addEventListener('DOMContentLoaded', function () {
   };
 
   removeBtn.addEventListener('click', removeUnicorns);
-  addBtn.addEventListener('click', cornify_add);
+  inputEl.addEventListener('input', function (e) {
+    var event = e.target.value;
+
+    if (event === word.toLowerCase()) {
+      for (var i = 0; i < 10; i++) {
+        cornify_add();
+      }
+
+      e.target.value = '';
+      displayWords();
+    }
+  });
+
+  var displayWords = function displayWords() {
+    word = words[Math.floor(Math.random() * words.length)];
+    displayTarget.textContent = word;
+  };
+
+  displayWords();
 });
 /******/ })()
 ;
