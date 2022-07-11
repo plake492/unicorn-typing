@@ -1,3 +1,5 @@
+import '../scss/index.scss'
+
 /*
  
     _______      ,-----.    .-------.    ,---.   .--..-./`)  ________    ____     __  
@@ -341,31 +343,40 @@ var cornify_add_cupcake_button = function () {
   }
 }
 
-// Adapted from http://www.snaptortoise.com/konami-js/
-var cornami = {
-  input: '',
-  pattern: '38384040373937396665',
-  clear: setTimeout('cornami.clear_input()', 5000),
-  load: function () {
-    window.document.onkeydown = function (event) {
-      if (cornami.input == cornami.pattern) {
-        cornify_add()
-        clearTimeout(cornami.clear)
-        return
-      } else {
-        cornami.input += event.keyCode
-        if (cornami.input == cornami.pattern) {
-          cornify_add()
-        }
-        clearTimeout(cornami.clear)
-        cornami.clear = setTimeout('cornami.clear_input()', 5000)
-      }
-    }
-  },
-  clear_input: function () {
-    cornami.input = ''
-    clearTimeout(cornami.clear)
-  }
-}
+// *================================================================================================* //
+// *================================================================================================* //
+// *================================================================================================* //
+// *================================================================================================* //
 
-cornami.load()
+window.addEventListener('DOMContentLoaded', () => {
+  const words = ['Selah', 'Mommy', 'Clancy', 'Daddy']
+  let word
+  const removeBtn = document.getElementById('remove-unicorns-btn')
+  const inputEl = document.getElementById('text-area')
+  const displayTarget = document.getElementById('display-word')
+
+  const removeUnicorns = () => {
+    for (let i = 0; i < cornify_count; i++) {
+      cornify_click_cupcake_button()
+    }
+  }
+
+  removeBtn.addEventListener('click', removeUnicorns)
+  inputEl.addEventListener('input', e => {
+    const event = e.target.value
+
+    if (event === word.toLowerCase()) {
+      for (let i = 0; i < 10; i++) {
+        cornify_add()
+      }
+      e.target.value = ''
+      displayWords()
+    }
+  })
+
+  const displayWords = () => {
+    word = words[Math.floor(Math.random() * words.length)]
+    displayTarget.textContent = word
+  }
+  displayWords()
+})
