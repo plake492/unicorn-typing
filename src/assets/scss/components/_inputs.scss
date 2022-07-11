@@ -82,19 +82,6 @@ input {
     --padding-y: #{calc(($space-sm * 1.444) - 1px)};
   }
 
-  &__helper-text {
-    height: var(--helper-height);
-    min-width: var(--helper-width);
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    padding: var(--padding-y) var(--padding-x);
-    margin-top: #{calc($border-radius) * -1};
-    border: var(--input-border-width) solid var(--border-color);
-    border-bottom-left-radius: $border-radius;
-    border-bottom-right-radius: $border-radius;
-    transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
-  }
-
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   ::placeholder {
     color: var(--input-placeholder-color);

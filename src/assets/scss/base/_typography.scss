@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Schoolbell&display=swap');
 // /**************************************************/
 // /* Establish base text sizes */
 // /**************************************************/
@@ -33,7 +34,7 @@ html {
 }
 
 body {
-  font-family: $primary-font;
+  font-family: 'Schoolbell', cursive;
   font-size: var(--text-base-size);
   font-style: normal;
   font-weight: 300;
@@ -49,11 +50,10 @@ p,
   font-size: var(--text-base-size);
   font-weight: 300;
   color: var(--text-color);
-  // margin-bottom: var(--space-md);
+  // margin-botto
 }
 
 .p-2 {
-  // margin-bottom: var(--space-md);
   line-height: calc(var(--text-alt-size) * var(--line-height-ratio));
   font-size: var(--text-alt-size);
   font-weight: 300;
@@ -65,7 +65,7 @@ small,
   font-size: var(--text-sm);
   line-height: calc(var(--text-sm) * var(--line-height-ratio));
   font-weight: 300;
-  // margin-bottom: var(--space-md);
+
   color: var(--text-color);
 }
 
@@ -85,7 +85,6 @@ small,
     line-height: $line-height;
     font-weight: 300;
     color: var(--text-color);
-    // margin-bottom: var(--space-md);
   }
 }
 
