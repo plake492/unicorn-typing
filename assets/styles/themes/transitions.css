@@ -1,0 +1,20 @@
+.transitions__page-enter {
+  opacity: 0;
+}
+
+.transitions__page-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.transitions__page-exit {
+  opacity: 1;
+}
+
+.transitions__page-exit-active {
+  opacity: 0;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+/*# sourceMappingURL=transitions.css.map */

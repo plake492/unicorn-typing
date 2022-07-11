@@ -1,0 +1,6 @@
+@each $key, $val in $transition-list {
+  .transition-#{$key} {
+    transition: #{$val} 0.3s ease-in-out;
+  }
+}
+

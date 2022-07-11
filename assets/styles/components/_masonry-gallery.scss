@@ -1,0 +1,7 @@
+.mason-grid {
+  column-count: var(--number-of-cols);
+  column-gap: 10px;
+  div {
+    margin-bottom: 10px;
+  }
+}

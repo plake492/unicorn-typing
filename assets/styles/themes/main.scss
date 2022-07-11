@@ -1,0 +1,23 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  overflow-wrap: break-word;
+}
+
+.body-is-fixed {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav,
+.nav {
+  background-color: $bg-secondary;
+}
