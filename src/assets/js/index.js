@@ -349,7 +349,18 @@ var cornify_add_cupcake_button = function () {
 // *================================================================================================* //
 
 window.addEventListener('DOMContentLoaded', () => {
-  const words = ['Selah', 'Mommy', 'Clancy', 'Daddy']
+  const words = [
+    'Selah',
+    'Mommy',
+    'Clancy',
+    'Daddy',
+    'Nonni',
+    'Papa',
+    'Grams',
+    'Pop pop',
+    'J J',
+    'Ralph'
+  ]
   let word
   const removeBtn = document.getElementById('remove-unicorns-btn')
   const inputEl = document.getElementById('text-area')
