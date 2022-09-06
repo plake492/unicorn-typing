@@ -9,23 +9,34 @@
   <body>
     <div class="py-md z-900 position-relative bg-purple w-100">
       <div class="container d-flex justify-content-between">
-        <div class="d-flex flex-gap-md">
-          <button
-            class="btn btn--no-bg z-900 position-relative"
-            id="remove-unicorns-btn"
-          >
-            Remove Unicorns
-          </button>
-
-          <div class="input z-900 position-relative">
-            <label for="text-area">TYPE</label>
-            <input type="text" id="text-area" name="text-area" />
-          </div>
-        </div>
-        <div>
-          <h3 id="display-word"></h3>
-        </div>
+        <div class="d-flex flex-gap-md"></div>
       </div>
     </div>
+    <section class="h-vh-75 container">
+      <div
+        class="d-flex flex-col justify-content-center align-items-center gap-sm w-100 h-100"
+      >
+        <div
+          style="z-index: 143143143"
+          id="text-display"
+          class="h3 text-center"
+        >
+          Word
+        </div>
+        <div
+          style="z-index: 143143143"
+          id="keyboard"
+          class="d-flex flex-col justify-content-center align-items-center gap-sm"
+        ></div>
+        <div
+          style="z-index: 143143143"
+          id="input-display"
+          class="h4 text-center pt-xxl mnb-lg"
+        >
+          Word
+        </div>
+      </div>
+    </section>
+    <button id="rainbow" class="btn btn--no-bg">Rainbow</button>
   </body>
 </html>
